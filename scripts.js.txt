@@ -1,0 +1,120 @@
+// scripts.js
+
+// Объект с переводами
+const translations = {
+    "ru": {
+        "home": "Главная",
+        "prices": "Цены",
+        "services": "Услуги",
+        "booking": "Выбор процедуры",
+        "confirmation": "Подтверждение и оплата",
+        "welcome": "Добро пожаловать в наш маникюрный салон!",
+        "intro": "Мы предлагаем широкий спектр услуг по уходу за ногтями.",
+        "gallery": "Галерея наших работ",
+        "price-overview": "Краткий обзор цен",
+        "manicure": "Маникюр",
+        "pedicure": "Педикюр",
+        "nail-extension": "Наращивание ногтей",
+        "about-us": "О нас",
+        "about-text": "Наш салон предлагает профессиональные услуги маникюра и педикюра с использованием лучших материалов и технологий.",
+        "contact": "Контакты: 123-456-7890 | email@example.com",
+        "full-price-list": "Подробный прайс-лист",
+        "service": "Услуга",
+        "price": "Цена (CAD)",
+        "services-description": "Описание услуг",
+        "manicure-description": "Описание маникюра, включая техники и используемые материалы.",
+        "pedicure-description": "Описание педикюра, включая процедуры и особенности ухода.",
+        "nail-extension-description": "Описание процесса наращивания ногтей и используемых материалов.",
+        "booking-title": "Запись на процедуру",
+        "choose-service": "Выберите услугу:",
+        "choose-date": "Выберите дату:",
+        "choose-time": "Выберите время:",
+        "confirm-booking": "Подтвердить запись",
+        "confirmation-title": "Подтверждение и оплата",
+        "chosen-service": "Выбранная услуга: Маникюр",
+        "contact-info": "Контактная информация:",
+        "billing-info": "Платежная информация:",
+        "pay-now": "Оплатить"
+    },
+    "en": {
+        "home": "Home",
+        "prices": "Prices",
+        "services": "Services",
+        "booking": "Booking",
+        "confirmation": "Confirmation & Payment",
+        "welcome": "Welcome to our nail salon!",
+        "intro": "We offer a wide range of nail care services.",
+        "gallery": "Our Work Gallery",
+        "price-overview": "Price Overview",
+        "manicure": "Manicure",
+        "pedicure": "Pedicure",
+        "nail-extension": "Nail Extension",
+        "about-us": "About Us",
+        "about-text": "Our salon offers professional manicure and pedicure services using the best materials and techniques.",
+        "contact": "Contact: 123-456-7890 | email@example.com",
+        "full-price-list": "Full Price List",
+        "service": "Service",
+        "price": "Price (CAD)",
+        "services-description": "Services Description",
+        "manicure-description": "Description of manicure, including techniques and materials used.",
+        "pedicure-description": "Description of pedicure, including procedures and care specifics.",
+        "nail-extension-description": "Description of the nail extension process and materials used.",
+        "booking-title": "Book a Service",
+        "choose-service": "Choose a service:",
+        "choose-date": "Choose a date:",
+        "choose-time": "Choose a time:",
+        "confirm-booking": "Confirm Booking",
+        "confirmation-title": "Confirmation & Payment",
+        "chosen-service": "Chosen service: Manicure",
+        "contact-info": "Contact Information:",
+        "billing-info": "Billing Information:",
+        "pay-now": "Pay Now"
+    },
+    "uk": {
+        "home": "Головна",
+        "prices": "Ціни",
+        "services": "Послуги",
+        "booking": "Вибір процедури",
+        "confirmation": "Підтвердження та оплата",
+        "welcome": "Ласкаво просимо до нашого манікюрного салону!",
+        "intro": "Ми пропонуємо широкий спектр послуг з догляду за нігтями.",
+        "gallery": "Галерея наших робіт",
+        "price-overview": "Короткий огляд цін",
+        "manicure": "Манікюр",
+        "pedicure": "Педикюр",
+        "nail-extension": "Нарощування нігтів",
+        "about-us": "Про нас",
+        "about-text": "Наш салон пропонує професійні послуги манікюру та педикюру, використовуючи найкращі матеріали та технології.",
+        "contact": "Контакти: 123-456-7890 | email@example.com",
+        "full-price-list": "Детальний прайс-лист",
+        "service": "Послуга",
+        "price": "Ціна (CAD)",
+        "services-description": "Опис послуг",
+        "manicure-description": "Опис манікюру, включаючи техніки та використовувані матеріали.",
+        "pedicure-description": "Опис педикюру, включаючи процедури та особливості догляду.",
+        "nail-extension-description": "Опис процесу нарощування нігтів та використовуваних матеріалів.",
+        "booking-title": "Запис на процедуру",
+        "choose-service": "Оберіть послугу:",
+        "choose-date": "Оберіть дату:",
+        "choose-time": "Оберіть час:",
+        "confirm-booking": "Підтвердити запис",
+        "confirmation-title": "Підтвердження та оплата",
+        "chosen-service": "Обрана послуга: Манікюр",
+        "contact-info": "Контактна інформація:",
+        "billing-info": "Платіжна інформація:",
+        "pay-now": "Сплатити"
+    }
+};
+
+// Функция для смены языка
+function changeLanguage(language) {
+    document.querySelectorAll("[data-translate-key]").forEach(element => {
+        const key = element.getAttribute("data-translate-key");
+        element.textContent = translations[language][key];
+    });
+}
+
+// По умолчанию установить русский язык
+document.addEventListener("DOMContentLoaded", () => {
+    changeLanguage("ru");
+});

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюрный Салон - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Подключение JavaScript для смены языка -->
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav>
+        <ul>
+            <li><a href="index.html" data-translate-key="home">Главная</a></li>
+            <li><a href="prices.html" data-translate-key="prices">Цены</a></li>
+            <li><a href="services.html" data-translate-key="services">Услуги</a></li>
+            <li><a href="booking.html" data-translate-key="booking">Выбор процедуры</a></li>
+            <li><a href="confirmation.html" data-translate-key="confirmation">Подтверждение и оплата</a></li>
+        </ul>
+        <!-- Выбор языка -->
+        <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+        </select>
+    </nav>
+
+    <!-- Главная секция -->
+    <header>
+        <h1 data-translate-key="welcome">Добро пожаловать в наш маникюрный салон!</h1>
+        <p data-translate-key="intro">Мы предлагаем широкий спектр услуг по уходу за ногтями.</p>
+    </header>
+
+    <!-- Галерея работ -->
+    <section id="gallery">
+        <h2 data-translate-key="gallery">Галерея наших работ</h2>
+        <!-- Добавьте изображения с примерами работ -->
+        <div class="gallery-images">
+            <!-- Пример изображения -->
+            <img src="assets/images/nail-art1.jpg" alt="Маникюр пример 1">
+            <img src="assets/images/nail-art2.jpg" alt="Маникюр пример 2">
+            <!-- Добавьте дополнительные изображения -->
+        </div>
+    </section>
+
+    <!-- Краткий обзор цен -->
+    <section id="price-overview">
+        <h2 data-translate-key="price-overview">Краткий обзор цен</h2>
+        <ul>
+            <li data-translate-key="manicure">Маникюр: от 50 CAD</li>
+            <li data-translate-key="pedicure">Педикюр: от 70 CAD</li>
+            <li data-translate-key="nail-extension">Наращивание ногтей: от 100 CAD</li>
+        </ul>
+    </section>
+
+    <!-- Общая информация о салоне -->
+    <section id="about">
+        <h2 data-translate-key="about-us">О нас</h2>
+        <p data-translate-key="about-text">Наш салон предлагает профессиональные услуги маникюра и педикюра с использованием лучших материалов и технологий.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p data-translate-key="contact">Контакты: 123-456-7890 | email@example.com</p>
+    </footer>
+</body>
+</html>

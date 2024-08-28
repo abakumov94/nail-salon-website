@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюрный Салон - Услуги</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Подключение JavaScript для смены языка -->
+</head>
+<body>
+    <!-- Навигация и выбор языка -->
+    <nav>
+        <ul>
+            <li><a href="index.html" data-translate-key="home">Главная</a></li>
+            <li><a href="prices.html" data-translate-key="prices">Цены</a></li>
+            <li><a href="services.html" data-translate-key="services">Услуги</a></li>
+            <li><a href="booking.html" data-translate-key="booking">Выбор процедуры</a></li>
+            <li><a href="confirmation.html" data-translate-key="confirmation">Подтверждение и оплата</a></li>
+        </ul>
+        <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+        </select>
+    </nav>
+
+    <!-- Описание услуг -->
+    <section id="services">
+        <h2 data-translate-key="services-description">Описание услуг</h2>
+        <article>
+            <h3 data-translate-key="manicure">Маникюр</h3>
+            <p data-translate-key="manicure-description">Описание маникюра, включая техники и используемые материалы.</p>
+        </article>
+        <article>
+            <h3 data-translate-key="pedicure">Педикюр</h3>
+            <p data-translate-key="pedicure-description">Описание педикюра, включая процедуры и особенности ухода.</p>
+        </article>
+        <article>
+            <h3 data-translate-key="nail-extension">Наращивание ногтей</h3>
+            <p data-translate-key="nail-extension-description">Описание процесса наращивания ногтей и используемых материалов.</p>
+        </article>
+        <!-- Добавьте больше услуг по мере необходимости -->
+    </section>
+
+    <footer>
+        <p data-translate-key="contact">Контакты: 123-456-7890 | email@example.com</p>
+    </footer>
+</body>
+</html>

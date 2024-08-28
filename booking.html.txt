@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюрный Салон - Выбор процедуры</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Подключение JavaScript для смены языка -->
+</head>
+<body>
+    <!-- Навигация и выбор языка -->
+    <nav>
+        <ul>
+            <li><a href="index.html" data-translate-key="home">Главная</a></li>
+            <li><a href="prices.html" data-translate-key="prices">Цены</a></li>
+            <li><a href="services.html" data-translate-key="services">Услуги</a></li>
+            <li><a href="booking.html" data-translate-key="booking">Выбор процедуры</a></li>
+            <li><a href="confirmation.html" data-translate-key="confirmation">Подтверждение и оплата</a></li>
+        </ul>
+        <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+        </select>
+    </nav>
+
+    <!-- Форма для выбора процедуры -->
+    <section id="booking">
+        <h2 data-translate-key="booking-title">Запись на процедуру</h2>
+        <form action="confirmation.html" method="post">
+            <label for="service" data-translate-key="choose-service">Выберите услугу:</label>
+            <select id="service" name="service">
+                <option value="manicure" data-translate-key="manicure">Маникюр</option>
+                <option value="pedicure" data-translate-key="pedicure">Педикюр</option>
+                <option value="nail-extension" data-translate-key="nail-extension">Наращивание ногтей</option>
+            </select>
+            <label for="date" data-translate-key="choose-date">Выберите дату:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time" data-translate-key="choose-time">Выберите время:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit" data-translate-key="confirm-booking">Подтвердить запись</button>
+        </form>
+    </section>
+
+    <footer>
+        <p data-translate-key="contact">Контакты: 123-456-7890 | email@example.com</p>
+    </footer>
+</body>
+</html>
